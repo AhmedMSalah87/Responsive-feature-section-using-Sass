@@ -1,0 +1,123 @@
+$primary-red: hsl(0, 78%, 62%);
+$primary-cyan: hsl(180, 62%, 55%);
+$primary-orange: hsl(34, 97%, 64%);
+$primary-blue: hsl(212, 86%, 64%);
+$heading-color: hsl(234, 12%, 34%);
+$background-color: hsl(0, 0%, 98%);
+$text-color: hsl(229, 6%, 66%);
+$text-size: 15px;
+
+@mixin feature-card($color) {
+  padding: 24px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  gap: 16px;
+  border-radius: 6px;
+  box-shadow: 0 12px 20px 4px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid $color;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background-color: $background-color;
+}
+
+.intro {
+  width: 90%;
+  margin: 48px auto;
+  max-width: 50rem;
+  text-align: center;
+
+  p:first-child,
+  h1 {
+    font-size: 36px;
+    color: $heading-color;
+  }
+
+  p:first-child {
+    font-weight: 200;
+  }
+
+  h1 {
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  p:last-child {
+    font-size: $text-size;
+    color: $text-color;
+  }
+}
+
+.feature-flex {
+  width: 90%;
+  max-width: 100rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  align-items: center;
+  margin-bottom: 4.8rem;
+
+  h2 {
+    color: $heading-color;
+  }
+
+  p {
+    color: $text-color;
+    font-size: $text-size;
+  }
+
+  .feature-first-item {
+    @include feature-card($primary-cyan);
+  }
+
+  .feature-team {
+    margin-bottom: 4.8rem;
+    @include feature-card($primary-red);
+  }
+
+  .feature-karma {
+    @include feature-card($primary-orange);
+  }
+
+  .feature-calculator {
+    @include feature-card($primary-blue);
+  }
+
+  .img-box {
+    margin-top: auto;
+    align-self: flex-end;
+  }
+}
+
+@media screen and (width < 900px) {
+  .feature-flex {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 4.8rem;
+    align-items: baseline;
+  }
+
+  .feature-second-item {
+    grid-row-end: span 2;
+  }
+}
+
+@media screen and (width < 600px) {
+  .feature-flex {
+    grid-template-columns: 1fr;
+  }
+}

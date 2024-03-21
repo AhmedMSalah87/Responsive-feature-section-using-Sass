@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background-color: hsl(0, 0%, 98%);
+}
+
+.intro {
+  width: 90%;
+  margin: 48px auto;
+  max-width: 50rem;
+  text-align: center;
+}
+.intro p:first-child,
+.intro h1 {
+  font-size: 36px;
+  color: hsl(234, 12%, 34%);
+}
+.intro p:first-child {
+  font-weight: 200;
+}
+.intro h1 {
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.intro p:last-child {
+  font-size: 15px;
+  color: hsl(229, 6%, 66%);
+}
+
+.feature-flex {
+  width: 90%;
+  max-width: 100rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  align-items: center;
+  margin-bottom: 4.8rem;
+}
+.feature-flex h2 {
+  color: hsl(234, 12%, 34%);
+}
+.feature-flex p {
+  color: hsl(229, 6%, 66%);
+  font-size: 15px;
+}
+.feature-flex .feature-first-item {
+  padding: 24px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  gap: 16px;
+  border-radius: 6px;
+  box-shadow: 0 12px 20px 4px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid hsl(180, 62%, 55%);
+}
+.feature-flex .feature-team {
+  margin-bottom: 4.8rem;
+  padding: 24px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  gap: 16px;
+  border-radius: 6px;
+  box-shadow: 0 12px 20px 4px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid hsl(0, 78%, 62%);
+}
+.feature-flex .feature-karma {
+  padding: 24px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  gap: 16px;
+  border-radius: 6px;
+  box-shadow: 0 12px 20px 4px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid hsl(34, 97%, 64%);
+}
+.feature-flex .feature-calculator {
+  padding: 24px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  gap: 16px;
+  border-radius: 6px;
+  box-shadow: 0 12px 20px 4px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid hsl(212, 86%, 64%);
+}
+.feature-flex .img-box {
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+@media screen and (width < 900px) {
+  .feature-flex {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 4.8rem;
+    align-items: baseline;
+  }
+  .feature-second-item {
+    grid-row-end: span 2;
+  }
+}
+@media screen and (width < 600px) {
+  .feature-flex {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=style.css.map */
